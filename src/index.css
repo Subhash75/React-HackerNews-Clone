@@ -1,0 +1,245 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+}
+
+div.root {
+  background-color: white;
+}
+
+div.container {
+  background-color: rgba(250, 246, 232, 1);
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  margin: auto;
+  position: relative;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+div.content-body {
+  margin-bottom: 1.5em;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+div.content-body > p {
+  flex-shrink: 0;
+  font-size: 1.5em;
+}
+
+div.content-body1 {
+  flex-basis: 80%;
+  margin-left: 2em;
+}
+
+div.content-body p.title {
+  font-size: 1.5em;
+  margin-bottom: 0.2em;
+}
+div.text {
+  font-size: 1em;
+  color: rgb(109, 109, 109, 1);
+}
+
+div.text span.first {
+  padding: 0 0.5em 0 0;
+  border-right: 2px solid black;
+}
+div.text span.second {
+  padding: 0 0.5em;
+  border-right: 2px solid black;
+}
+div.text span.third {
+  padding: 0 0.5em;
+}
+
+/* ---- styles for nav bar --- */
+
+ul {
+  list-style: none;
+}
+
+div.links-container {
+  background-color: rgba(255, 102, 0, 1);
+  width: 100%;
+  padding: 0.5em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  overflow: auto;
+}
+
+div.logo {
+  flex-basis: 100%;
+  font-size: 2em;
+}
+
+div.links-body {
+  font-size: 1.1em;
+  padding-top: 0.3em;
+  margin-left: 3.2em;
+}
+
+div.links-body a.anchor {
+  padding: 0 0.5em;
+  border-right: 1px solid;
+  font-weight: 600;
+}
+
+div.login {
+  margin-left: auto;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+/* --- login form ---- */
+
+div.login-form {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  padding: 0.8em;
+}
+
+
+div.login-form label {
+  font-size: 1.1em;
+  margin: 0 .2em .5em 0;
+  display: inline-block;
+}
+
+div.login-form input:focus {
+  border-radius: 5px;
+  border: solid  rgb(83, 83, 230);
+  outline: solid rgb(83, 83, 230);
+}
+
+div.login-form button {
+  margin-top: 1.2em;
+  padding: .3em .5em;
+  border-radius: 5px;
+  outline: none;
+}
+
+p.form-heading {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+
+div.sign-in > p:last-of-type {
+  font-size: 1.1em;
+  color: blue;
+  text-decoration: underline;
+  margin-top: 1em;
+}
+
+div.create-account{
+  margin-top: 2em  !important;
+}
+
+
+/* --- footer ---- */
+
+
+div.footer {
+  padding-bottom: .5em;
+  position: relative;
+  bottom: 0;
+}
+
+div.footer ul{
+  margin: 1.5em auto;
+  width: fit-content;
+}
+
+div.line {
+  width: 100vw;
+  border: solid rgba(255, 102, 0, 1);
+}
+
+div.footer li {
+  display: inline-block;
+}
+
+div.footer a {
+  padding: 0 .5em;
+  border-right: 1.5px solid;
+}
+
+div.footer label {
+  font-size: 1.4em;
+  color: gray;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+div.footer input {
+  font-size: 1.4em;
+  display: block;
+  margin: auto;
+  width: 90%;
+}
+
+div.footer input:focus {
+  border-radius: 5px;
+  border: solid  rgb(83, 83, 230);
+  outline: solid rgb(83, 83, 230);
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 16px;
+  }
+  div.container {
+    width: 100%;
+  }
+
+  /* ---- styles for nav bar --- */
+
+  div.logo {
+    flex-basis: auto;
+    font-size: 2em;
+  }
+ /* --- footer ---- */
+
+
+ div.search-bar {
+  text-align: center;
+}
+
+  div.footer label {
+    text-align: center;
+    display: inline;   
+    width: fit-content;
+  }
+
+  div.footer input {
+    margin-left: .5em;
+    display: inline;
+    width: 20%;
+  }
+
+}
