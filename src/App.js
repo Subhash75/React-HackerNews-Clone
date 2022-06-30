@@ -8,7 +8,6 @@ function App() {
     <BrowserRouter>
       <div className="container">
         <Header />
-        <h1>sdsdhfudaouifosuifuoisouifiuo</h1>
       </div>
     </BrowserRouter>
   );
