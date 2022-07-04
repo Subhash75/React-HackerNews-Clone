@@ -1,26 +1,29 @@
 import React, { useEffect, useState } from "react";
 import Body from "./Body";
+import useFetch from './useFetch'
 
-function Fetch() {
-  let [state, setState] = useState([]);
+function New() {
+  // let [state, setState] = useState([]);
 
-  useEffect(() => {
-    fetch("https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty")
-      .then((response) => response.json())
-      .then((value) => {
-        value.slice(21, 41).map((data) => {
-          return fetch(
-            `https://hacker-news.firebaseio.com/v0/item/${data}.json?print=pretty`
-          )
-            .then((response) => response.json())
-            .then((value) => {
-              setState((state) => {
-                return [...state, value];
-              });
-            });
-        });
-      });
-  }, []);
+  // // useEffect(() => {
+  // //   fetch("https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty")
+  // //     .then((response) => response.json())
+  // //     .then((value) => {
+  // //       value.slice(21, 41).map((data) => {
+  // //         return fetch(
+  // //           `https://hacker-news.firebaseio.com/v0/item/${data}.json?print=pretty`
+  // //         )
+  // //           .then((response) => response.json())
+  // //           .then((value) => {
+  // //             setState((state) => {
+  // //               return [...state, value];
+  // //             });
+  // //           });
+  // //       });
+  // //     });
+  // // }, []);
+
+  let state = useFetch(21, 41);
   
   return (
     <>
@@ -45,4 +48,4 @@ function Fetch() {
   );
 }
 
-export default Fetch;
+export default New;
